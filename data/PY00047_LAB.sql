@@ -20,5 +20,3 @@ VALUES
 GO
 
 select*from Users
-
-GRANT INSERT ON OBJECT::dbo.Users TO phamtin;
