@@ -1,0 +1,32 @@
+package LAB1;
+
+public class UserTest {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		UserManagement mng = new UserManagement();
+		
+		System.out.println("=======TIM TAT CA=======");
+		mng.findAll();
+		
+		System.out.println("=======TIM DUA TREN KHOA CHINH=======");
+		mng.findById("hieuvd");
+		
+		System.out.println("=======TAO=======");
+		User user = new User("huongpt","123","Pham Thi Huong", "huongpt@gmail.com",true);
+		mng.create(user);
+		
+		System.out.println("=======SUA=======");
+		mng.update("nghiatp");
+		
+		System.out.println("=======XOA=======");
+		mng.deleteById("trungtp");
+		
+		System.out.println("=======TIMKIEMTHEOEMAIL=======");
+		mng.findUsersByEmailAndRole();
+		
+        System.out.println("=======DANH SACH USER TRANG 3=======");
+        mng.findUsersByPage(2, 5);
+    
+		
+	}
+}

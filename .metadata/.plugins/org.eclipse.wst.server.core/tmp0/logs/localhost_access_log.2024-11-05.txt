@@ -1,0 +1,2 @@
+127.0.0.1 - - [05/Nov/2024:08:52:26 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [05/Nov/2024:08:52:26 -0500] "GET /PhanTam_SOF3012_PY00027/WEB-INF/classes/Lab1/UserManagement.java HTTP/1.1" 404 682

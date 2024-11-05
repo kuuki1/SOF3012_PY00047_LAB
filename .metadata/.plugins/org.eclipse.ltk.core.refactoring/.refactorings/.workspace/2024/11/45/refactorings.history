@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;PhanTam_SOF3012_PY00027&apos;" deleteContents="false" description="Delete resource &apos;PhanTam_SOF3012_PY00027&apos;" element1="/PhanTam_SOF3012_PY00027" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1730814796191"/>&#x0A;<refactoring comment="Delete resource &apos;PY00047_LAB&apos;" deleteContents="true" description="Delete resource &apos;PY00047_LAB&apos;" element1="/PY00047_LAB" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1730816035423"/>
+</session>
