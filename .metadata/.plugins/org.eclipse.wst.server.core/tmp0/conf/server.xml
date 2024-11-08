@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\MY PC\Desktop\SCR\java_4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\MY PC\Desktop\SCR\java_4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SOF3012_PY00047_LAB" path="/SOF3012_PY00047_LAB" reloadable="true" source="org.eclipse.jst.jee.server:SOF3012_PY00047_LAB"/></Host>
+      <Context docBase="C:\Users\MY PC\Desktop\SCR\java_4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\MY PC\Desktop\SCR\java_4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SOF3012_PY00047_LAB" path="/SOF3012_PY00047_LAB" reloadable="true" source="org.eclipse.jst.jee.server:SOF3012_PY00047_LAB"/><Context docBase="C:\Users\MY PC\Desktop\SCR\java_4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PY00047_LAB" path="/PY00047_LAB" reloadable="true" source="org.eclipse.jst.jee.server:PY00047_LAB"/><Context docBase="C:\Users\MY PC\Desktop\SCR\java_4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SOF3012_PY00047_ASM" path="/SOF3012_PY00047_ASM" reloadable="true" source="org.eclipse.jst.jee.server:SOF3012_PY00047_ASM"/></Host>
     </Engine>
   </Service>
 </Server>
