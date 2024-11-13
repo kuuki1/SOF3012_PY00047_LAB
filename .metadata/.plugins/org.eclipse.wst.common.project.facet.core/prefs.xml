@@ -4,6 +4,7 @@
       <node name="last-provider-used">
         <attribute name="2.1" value="jpa-no-op-library-provider"/>
         <attribute name="2.2" value="jpa-no-op-library-provider"/>
+        <attribute name="3.0" value="jpa-no-op-library-provider"/>
       </node>
     </node>
   </facet>

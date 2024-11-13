@@ -1,8 +1,12 @@
 package LAB1;
 
+import java.util.List;
+
+import LAB3.Favorite;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,6 +24,15 @@ public class User {
 	@Column(name = "Admin")
 	Boolean admin = false;
 	
+	// Trong User.java
+	@OneToMany(mappedBy = "user")
+	private List<Favorite> favorites;
+
+	public List<Favorite> getFavorites() {
+	    return favorites;
+	}
+
+	
 	public User(String id, String password, String fullname, String email, Boolean admin) {
 		super();
 		this.id = id;
@@ -30,7 +43,6 @@ public class User {
 	}
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public String getId() {
 		return id;
@@ -62,6 +74,5 @@ public class User {
 	public void setAdmin(Boolean admin) {
 		this.admin = admin;
 	}
-	
 }
 

@@ -1,0 +1,107 @@
+@charset "utf-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, rgba(200,238,174,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    margin: 20px 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Màu cho từng nút */
+input[type="submit"][value="Create"] {
+    background-color: #5cb85c; /* Xanh lá */
+}
+
+input[type="submit"][value="Create"]:hover {
+    background-color: #4cae4c;
+}
+
+input[type="submit"][value="Update"] {
+    background-color: #0275d8; /* Xanh dương */
+}
+
+input[type="submit"][value="Update"]:hover {
+    background-color: #025aa5;
+}
+
+input[type="submit"][value="Delete"] {
+    background-color: #d9534f; /* Đỏ */
+}
+
+input[type="submit"][value="Delete"]:hover {
+    background-color: #c9302c;
+}
+
+input[type="submit"][value="Reset"]  {
+    background-color: #f0ad4e; /* Cam */
+}
+
+input[type="submit"][value="Reset"]:hover {
+    background-color: #ec971f;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
+  <module moduleId="org.eclipse.jst.jee.server:JAVA4_LETRONGCHIEN_PY00076" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SOF3012_PY00047_ASM" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SOF3012_PY00047_LAB" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>
