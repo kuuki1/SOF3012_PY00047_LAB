@@ -7,7 +7,9 @@ public interface UserDAO {
 
     List<User> findAll();
 
-    User findById(String id);  
+    User findById(String id);
+    
+    User findByIdOrEmail(String identifier);
 
     void create(User item);
 

@@ -93,7 +93,7 @@ VALUES
 GO
 
 -- Query to verify data in Videos table
-SELECT * FROM Videos;
+SELECT * FROM Favorites;
 GO
 
 -- Query to verify data in Favorites table

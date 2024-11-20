@@ -8,9 +8,58 @@ import jakarta.persistence.TypedQuery;
 import java.util.List;
 
 import LAB3.Video;
+import dto.VideoShareInfoDTO;
 
 public class VideoDAOImpl implements VideoDAO {
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("LAB3_PU");
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("PY00047_LAB");
+    
+    @Override
+    public List<Video> findByTitle(String keyword) {
+    	EntityManager em = emf.createEntityManager();
+        return em.createQuery("SELECT v FROM Video v WHERE v.title LIKE :keyword", Video.class)
+                 .setParameter("keyword", "%" + keyword + "%")
+                 .getResultList();
+    }
+    
+    @Override
+    public List<VideoShareInfoDTO> getVideoShareSummary() {
+    	EntityManager em = emf.createEntityManager();
+        return em.createQuery(
+                "SELECT new dto.VideoShareInfoDTO(v.title, COUNT(f.id), MIN(f.likeDate), MAX(f.likeDate)) " +
+                "FROM Video v JOIN Favorite f ON f.video = v " +
+                "GROUP BY v.id, v.title", // Thêm v.title vào GROUP BY
+                VideoShareInfoDTO.class)
+                .getResultList();
+    }
+    
+    @Override
+    public List<Video> findVideosSharedIn2024() {
+    	EntityManager em = emf.createEntityManager();
+        return em.createQuery(
+                "SELECT v FROM Video v JOIN Favorite f ON f.videoId = v.id " +
+                "WHERE FUNCTION('YEAR', f.likeDate) = 2024 " +
+                "ORDER BY f.likeDate ASC", Video.class)
+                .getResultList();
+    }
+    
+    @Override
+    public List<Video> findUnlikedVideos() {
+    	EntityManager em = emf.createEntityManager();
+        return em.createQuery(
+                "SELECT v FROM Video v WHERE v.id NOT IN (SELECT DISTINCT f.videoId FROM Favorite f)", Video.class)
+                .getResultList();
+    }
+    
+    @Override
+    public List<Video> findTopLikedVideos() {
+    	EntityManager em = emf.createEntityManager();
+        return em.createQuery(
+                "SELECT v FROM Video v JOIN Favorite f ON f.videoId = v.id " +
+                "GROUP BY v.id ORDER BY COUNT(f.id) DESC", Video.class)
+                .setMaxResults(10)
+                .getResultList();
+    }
+
 
     @Override
     public Video findById(String id) {

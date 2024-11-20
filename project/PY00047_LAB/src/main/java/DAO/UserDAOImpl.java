@@ -1,6 +1,7 @@
 package DAO;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 import LAB1.User;
 
@@ -8,6 +9,17 @@ import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
     private EntityManager em = XJPA.getEntityManager();
+    
+    @Override
+    public User findByIdOrEmail(String identifier) {
+        try {
+            return em.createQuery("SELECT u FROM User u WHERE u.id = :identifier OR u.email = :identifier", User.class)
+                     .setParameter("identifier", identifier)
+                     .getSingleResult();
+        } catch (NoResultException e) {
+            return null; // Trả về null nếu không tìm thấy
+        }
+    }
 
     @Override
     public List<User> findAll() {
