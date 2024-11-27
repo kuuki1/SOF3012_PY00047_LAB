@@ -18,4 +18,6 @@ public interface UserDAO {
     void deleteById(String id);
 
 	void close();
+
+	User authenticate(String username, String password);
 }

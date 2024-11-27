@@ -1,4 +1,4 @@
-CREATE DATABASE PY00047_LAB
+﻿CREATE DATABASE PY00047_LAB
 GO
 USE PY00047_LAB
 GO
@@ -101,3 +101,13 @@ SELECT * FROM Favorites WHERE UserID like 'U002';
 GO
 
 select*from Users
+
+CREATE TABLE Logs (
+    Id INT IDENTITY(1,1) PRIMARY KEY,  -- Cột tự động tăng
+    Url VARCHAR(255) NOT NULL,
+    AccessTime DATETIME DEFAULT GETDATE(),  -- Thay timestamp bằng DATETIME và sử dụng GETDATE() để tạo giá trị mặc định
+    Fullname NVARCHAR(50) NOT NULL
+);
+
+INSERT INTO Logs (Url, AccessTime, Fullname)
+VALUES ('/home', GETDATE(), 'Nguyen Van A');
